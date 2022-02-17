@@ -50,12 +50,14 @@ zsh ./rns.sh
 ```
 --[ RNS Version 0.0.0
 
-[ 1 ] acid.sh
-[ 2 ] lsd.sh
+[ 1 ] ls.sh
+[ 2 ] ping.sh
 [ 3 ] rabbitOpenBAR.sh
 
-[ + ] Task added
+[ + ] Task already add
+
+
 
 [ ! ] Do you whant add task or remove
-[ ! ] 1) Add 2) Remove 3) Execute 4) Exit
+[ ! ] 1) Add 2) Remove 3) Execute 4) DNA inject (5 Exit
 ```
