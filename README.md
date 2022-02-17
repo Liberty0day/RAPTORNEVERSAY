@@ -1,7 +1,8 @@
 # RAPTORNEVERSAY
 
 ## Task creator
-NOTE: I update soon the script for download without google drive ..
+
+NOTE: This page under construction! 
 
 ## The Process
 
