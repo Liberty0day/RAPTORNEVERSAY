@@ -43,7 +43,7 @@ zsh ./rns.sh
 [ 3 ] NUCLEOID_3
 
 [ ! ] Select you DNA please
-
+```
 
 ### TASK MENU
 
