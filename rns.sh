@@ -1,10 +1,7 @@
-#!/bin/bash
-
-source raptorneversay.config
+source rns.config
 
 MEMO=''
 clear
-
 
 
 TASK_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/TASK"
@@ -68,6 +65,8 @@ function choice(){
 	if (($AddRm == 1))
 	then
 		clear
+		printf "${BLUE}--[ ${FRAMEWORK_NAME} Version ${FRAMEWORK_VERSION}\n\n"
+		printf "${BLUE}[ + ] Your tasks list\n\n"
 		showTask
 		addTask
 	elif (($AddRm == 2))
@@ -91,6 +90,8 @@ function main(){
 		clear
 		printf "${BLUE}--[ ${FRAMEWORK_NAME} Version ${FRAMEWORK_VERSION}\n\n"
 		showTask
+		printf "\n"
+		printf "${BLUE}[ + ] Task added\n"
 		memoTask
 		choice
 	done
