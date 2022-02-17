@@ -1,12 +1,10 @@
+# SYNAPSE
 source rns.config
 
 MEMO=''
 clear
 
-
 TASK_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )/TASK"
-
-
 
 funtion showTask(){
 END=$(ls $TASK_DIR |wc -l);
@@ -36,7 +34,6 @@ function rmTask(){
 	MEMO[(r)$rm]=()
 }
 
-
 function execTask(){
 echo "[+] Task execution started"
 
@@ -51,16 +48,12 @@ do
 	zsh TASK/$(echo $LIST_TASK |sed 's/ /\n/g' |awk '{if(NR=='$START_TASK') print $0}');
 	((START_TASK++))
 done
-
-	
-
 }
-
 
 function choice(){
 
 	echo "[ ! ] Do you whant add task or remove"
-	echo "[ ! ] 1) Add 2) Remove 3) Execute"
+	echo "[ ! ] 1) Add 2) Remove 3) Execute 4) Exit"
 	read AddRm
 	if (($AddRm == 1))
 	then
@@ -74,11 +67,16 @@ function choice(){
 		clear
 		showTask
 		rmTask
-	else (($AddRm == 3))
-		execTask
+	elif (($AddRm == 3))
+	then execTask
 		read
+	else (($AddRm == 4))
+		clear
+		exit 0
 	fi
 }
+
+
 
 function memoTask(){
 	echo $MEMO  |sed 's/ /\n/g' |tac
@@ -97,7 +95,57 @@ function main(){
 	done
 }
 
-main
+#main
+
+LOADER(){
+	FRAMEWORK
+	printf "${BLUE}[ ? ] Do you whan use CRISPR ?\n"
+	read answer
+	if [ "$answer" != "${answer#[Yy]}" ] ;then 
+ #   echo Yes
+	DNA_INJECT
+	main
+	else
+    echo No
+	main
+	fi
+}
+
+DNA_INJECT(){
+	FRAMEWORK
+	printf "${BLUE}[ + ] DNA List\n\n"
+	START_DNA=1
+	END_DNA=$(ls DNA_DB |sed 's/ /\\n/g' |wc -l|awk '{print $1}')
+
+	# ls DNA_DB |sed 's/ /\\n/g'
+
+while (($START_DNA <= $END_DNA))
+do
+echo  "[ $START_DNA ] $(ls DNA_DB |sed 's/ /\\n/g' | awk 'NR=='$START_DNA'')" 
+((START_DNA++));
+done
+
+printf "\n"
+printf "${BLUE}[ ! ] Select you DNA please\n\n"
+read protein
+printf "${BLUE}[ ! ] DNA injection loading\n"
+cp DNA_DB/$(ls DNA_DB |sed 's/ /\\n/g' | awk 'NR=='$protein'')/* TASK/
+printf "${BLUE}[ + ] DNA succeful injection\n\n"
 
 
+}
 
+DNA_RESTORE(){
+	FRAMEWORK
+	printf "${BLUE}[ ? ] Do you whant restore your DNA?\n"
+	read answer
+	if [ "$answer" != "${answer#[Yy]}" ] ;then 
+	/bin/rm -f TASK/* 	
+	printf "${BLUE}[ + ] Your DNA is restored\n"
+	else
+	main
+	fi
+}
+
+
+LOADER
