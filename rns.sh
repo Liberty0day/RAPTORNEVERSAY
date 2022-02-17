@@ -135,7 +135,7 @@ echo  "[ $START_DNA ] $(ls DNA_DB |sed 's/ /\\n/g' | awk 'NR=='$START_DNA'')"
 done
 
 printf "\n"
-printf "${BLUE}[ ! ] Select you DNA please\n\n"
+printf "${BLUE}[ ! ] Select your DNA please\n\n"
 read protein
 printf "${BLUE}[ ! ] DNA injection loading\n"
 cp DNA_DB/$(ls DNA_DB |sed 's/ /\\n/g' | awk 'NR=='$protein'')/* TASK/
