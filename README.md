@@ -2,11 +2,11 @@
 
 ## Task creator
 
-NOTE: This page under construction! 
+NOTE: This page is under construction!
 
 ## The Process
 
-1. Select your scripts
+1. Select scripts
 2. Execute the chain
 
 
@@ -31,7 +31,6 @@ zsh ./rns.sh
 [ 2 ] task_2.sh
 [ 3 ] task_3.sh
 
-[ ! ] Do you whant add task or remove
+[ ! ] Do you want add task or remove
 [ ! ] 1) Add 2) Remove 3) Execute
 ```
-
