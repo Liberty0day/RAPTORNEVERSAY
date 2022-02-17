@@ -30,9 +30,6 @@ zsh ./rns.sh
 [ ? ] Do you whan use CRISPR ?
 
 ```
-```
-y
-```
 
 ### DNA MENU
 
@@ -47,9 +44,6 @@ y
 
 [ ! ] Select you DNA please
 
-```
-1
-```
 
 ### TASK MENU
 
