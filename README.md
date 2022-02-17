@@ -22,15 +22,46 @@ zsh ./rns.sh
 
 ## Example
 
-### MENU_INSTALL
+### CRISPR INJECTION
 
 ```
 --[ RNS Version 0.0.0
 
-[ 1 ] task_1.sh
-[ 2 ] task_2.sh
-[ 3 ] task_3.sh
+[ ? ] Do you whan use CRISPR ?
 
-[ ! ] Do you want add task or remove
-[ ! ] 1) Add 2) Remove 3) Execute
+```
+```
+y
+```
+
+### DNA MENU
+
+```
+--[ RNS Version 0.0.0
+
+[ + ] DNA List
+
+[ 1 ] NUCLEOID_1
+[ 2 ] NUCLEOID_2
+[ 3 ] NUCLEOID_3
+
+[ ! ] Select you DNA please
+
+```
+1
+```
+
+### TASK MENU
+
+```
+--[ RNS Version 0.0.0
+
+[ 1 ] acid.sh
+[ 2 ] lsd.sh
+[ 3 ] rabbitOpenBAR.sh
+
+[ + ] Task added
+
+[ ! ] Do you whant add task or remove
+[ ! ] 1) Add 2) Remove 3) Execute 4) Exit
 ```
