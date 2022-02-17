@@ -53,7 +53,7 @@ done
 function choice(){
 
 	echo "[ ! ] Do you whant add task or remove"
-	echo "[ ! ] 1) Add 2) Remove 3) Execute 4) Exit"
+	echo "[ ! ] 1) Add 2) Remove 3) Execute 4) DNA inject (5 Exit"
 	read AddRm
 	if (($AddRm == 1))
 	then
@@ -61,6 +61,8 @@ function choice(){
 		printf "${BLUE}--[ ${FRAMEWORK_NAME} Version ${FRAMEWORK_VERSION}\n\n"
 		printf "${BLUE}[ + ] Your tasks list\n\n"
 		showTask
+		printf "\n"
+		printf "${BLUE}[ + ] Task already add\n\n"
 		addTask
 	elif (($AddRm == 2))
 	then
@@ -70,12 +72,18 @@ function choice(){
 	elif (($AddRm == 3))
 	then execTask
 		read
-	else (($AddRm == 4))
+	elif (($AddRm == 4))
+	then 
+	DNA_INJECT
+	main
+	else (($AddRm == 5))
 		clear
 		exit 0
 	fi
 }
 
+    DNA_RESTORE
+	main
 
 
 function memoTask(){
@@ -89,8 +97,9 @@ function main(){
 		printf "${BLUE}--[ ${FRAMEWORK_NAME} Version ${FRAMEWORK_VERSION}\n\n"
 		showTask
 		printf "\n"
-		printf "${BLUE}[ + ] Task added\n"
+		printf "${BLUE}[ + ] Task already add\n\n"
 		memoTask
+		printf "\n"
 		choice
 	done
 }
@@ -106,7 +115,7 @@ LOADER(){
 	DNA_INJECT
 	main
 	else
-    echo No
+    DNA_RESTORE
 	main
 	fi
 }
