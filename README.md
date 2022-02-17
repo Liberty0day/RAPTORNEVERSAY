@@ -3,10 +3,6 @@
 ## Task creator
 NOTE: I update soon the script for download without google drive ..
 
-
-
-
-
 ## The Process
 
 1. Select your scripts
@@ -15,13 +11,13 @@ NOTE: I update soon the script for download without google drive ..
 
 ## Preliminaries
 You need install this tools :
+
 - zsh
 
-## Creating lab
+## Create task chain
 ```
 zsh ./rns.sh
 ```
-
 
 ## Example
 
