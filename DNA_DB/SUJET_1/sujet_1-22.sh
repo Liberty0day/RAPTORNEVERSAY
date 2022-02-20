@@ -10,5 +10,7 @@ OPERATOR    ==> INFO ==> Server ==>> No response (opened port)     ==> Client   
 OPERATOR    ==> INFO ==> CLient ==>> UDP ==> Server
 OPERATOR    ==> INFO ==> Server ==>> ICMP (Closed port) ==> Client
 
-
+OPERATOR    ==> TASK ==> ping IP_TANGO
+OPERATOR    ==> TASK ==> netdiscover -r 172.16.14.0/24
+OPERATOR    ==> TASK ==> nmap -p 445 -sV IP_TANGO
 '

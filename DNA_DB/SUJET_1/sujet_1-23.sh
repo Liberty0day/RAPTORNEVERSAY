@@ -9,3 +9,4 @@ OPERATOR    ==> TASK ==> nmap -p 1-65535 -sV IP_TANGO
 OPERATOR    ==> TASK ==> nmap -p 139,445,21,23 IP_TANGO
 OPERATOR    ==> TASK ==> nmap -A IP_TANGO
 '
+read
