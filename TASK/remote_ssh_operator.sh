@@ -1,3 +1,8 @@
-echo "[+] Remote OPERATOR machine"
+#!/bin/bash
 
-ssh kali@172.16.14.132
+/usr/bin/expect -c '
+spawn ssh kali@172.16.14.132
+expect "kali"
+send "kali\r"
+interact
+'
