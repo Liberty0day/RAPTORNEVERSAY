@@ -7,8 +7,6 @@ TANGO      === WIN 7              IP === 134
 OSCAR      === WIN 10             IP === 133
 
 
-
-
 OPERATOR    ==> TASK ==> sudo su << for to be root
 OPERATOR    ==> TASK ==> nmap -p- -sV IP_CHARLIE
 OPERATOR    ==> TASK ==> echo "Aa123456" >> /usr/share/metasploit-framwork/data/wordlists/unix_users.txt
